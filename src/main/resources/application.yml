@@ -1,0 +1,25 @@
+expiration_time: 864_000_000
+token_prefix: Bearer
+header_string: Authorization
+spring:
+  profiles:
+    active: spring.profile.active
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/dev_db
+    username: postgres
+    password: Querty1
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        naming:
+---
+spring:
+  profiles: prod
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/prod_db
+    username: postgres
+    password: Querty1
